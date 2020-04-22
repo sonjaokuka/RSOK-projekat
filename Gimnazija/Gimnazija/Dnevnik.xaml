@@ -1,0 +1,43 @@
+﻿<Window x:Class="Gimnazija.Dnevnik"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gimnazija"
+        mc:Ignorable="d"
+        Title="Dnevnik" Height="450" Width="800">
+    <Grid>
+        <DataGrid Name="DataGridDnevnik" AutoGenerateColumns="False" Margin="0,248,0,0" SelectionChanged="DataGridDnevnik_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding IdDnevnika}" Header="IdDnevnika" Width="*"/>
+                <DataGridTextColumn Binding="{Binding IdGimnazije}" Header="IdGimnazije" Width="*" Visibility="Hidden"/>
+                <DataGridTextColumn Binding="{Binding IdUcenika}" Header="IdUcenika" Width="*" Visibility="Hidden"/>
+                <DataGridTextColumn Binding="{Binding IdPredmeta}" Header="IdPredmeta" Width="*" Visibility="Hidden"/>
+                <DataGridTextColumn Binding="{Binding NazivPredmeta}" Header="NazivPredmeta" Width="*" Visibility="Hidden"/>
+                <DataGridTextColumn Binding="{Binding ImeUcenika}" Header="ImeUcenika" Width="*"/>
+                <DataGridTextColumn Binding="{Binding PrezimeUcenika}" Header="PrezimeUcenika" Width="*"/>
+                
+                <DataGridTextColumn Binding="{Binding Razred}" Header="Razred" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Ocena}" Header="Ocena" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Datum}" Header="Datum" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid >
+        <Label x:Name="lblIdDnevnika" Content="IdDnevnika" HorizontalAlignment="Left" Height="30" Margin="26,8,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden"/>
+        <Label x:Name="lblImeUcenika" Content="Ime" HorizontalAlignment="Left" Height="30" Margin="26,77,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lblNazivPredmeta" Content="Predmet" HorizontalAlignment="Left" Height="30" Margin="436,77,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lblRazred" Content="Razred" HorizontalAlignment="Left" Height="30" Margin="436,38,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="txtidDnevnika" HorizontalAlignment="Left" Height="30" Margin="141,8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Button x:Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" Height="30" Margin="293,34,0,0" VerticalAlignment="Top" Width="100" Click="btnDodaj_Click"/>
+        <Button x:Name="btnIzmeni" Content="Izmeni" HorizontalAlignment="Left" Height="30" Margin="293,77,0,0" VerticalAlignment="Top" Width="100" Click="btnIzmeni_Click"/>
+        <Button x:Name="btnIzbrisi" Content="Izbrisi" HorizontalAlignment="Left" Height="30" Margin="293,124,0,0" VerticalAlignment="Top" Width="100" Click="btnIzbrisi_Click"/>
+        <Label x:Name="lbldtDatum" Content="Datum" HorizontalAlignment="Left" Margin="436,120,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lblOcena" Content="Ocena" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,120,0,0" Width="75"/>
+        <TextBox x:Name="txtOcena" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="141,120,0,0"/>
+        <TextBox x:Name="txtRazred" HorizontalAlignment="Left" Height="30" Margin="565,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="dtDatum" HorizontalAlignment="Left" Height="30" Margin="565,116,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtImeUcenika" HorizontalAlignment="Left" Height="25" Margin="141,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblPrezimeUcenika" Content="Prezime" HorizontalAlignment="Left" Height="24" Margin="26,38,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="txtPrezimeUcenika" HorizontalAlignment="Left" Height="31" Margin="141,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNazivPredmeta" HorizontalAlignment="Left" Height="34" Margin="565,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
