@@ -1,0 +1,36 @@
+﻿<Window x:Class="Cvecara.KupiProzor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cvecara"
+        mc:Ignorable="d"
+        Title="KupiProzor" Height="420" Width="500">
+    <Border Padding="20">
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Naziv:" Grid.Column="0" Grid.Row="0" FontSize="20" Margin="20"/>
+                <TextBlock x:Name="nazivTxt" Text="" Grid.Column="1" Grid.Row="0" FontSize="20" Margin="20"/>
+                <TextBlock Text="Cena:" Grid.Column="0" Grid.Row="1" FontSize="20" Margin="20"/>
+                <TextBlock x:Name="cenaTxt" Text="" Grid.Column="1" Grid.Row="1" FontSize="20" Margin="20"/>
+                <TextBlock Text="Vrsta:" Grid.Column="0" Grid.Row="2" FontSize="20" Margin="20"/>
+                <TextBlock x:Name="vrstaTxt" Text="" Grid.Column="1" Grid.Row="2" FontSize="20" Margin="20"/>
+                <TextBlock Text="Datum Dostave:" Grid.Column="0" Grid.Row="3" FontSize="20" Margin="20"/>
+                <TextBlock x:Name="datumTxt" Text="" Grid.Column="1" Grid.Row="3" FontSize="20" Margin="20"/>
+                <Button  Content="Potvrdi" x:Name="apply" Grid.Column="1" Grid.Row="4" Margin="20" Click="Apply_Click"/>
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>
