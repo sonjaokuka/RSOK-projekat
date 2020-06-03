@@ -21,7 +21,6 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                     
-
                 <TextBlock Text="Naziv:" Grid.Column="0" Grid.Row="0" FontSize="20" Margin="20"/>
                 <TextBlock x:Name="nazivTxt" Text="" Grid.Column="1" Grid.Row="0" FontSize="20" Margin="20"/>
                 <TextBlock Text="Cena:" Grid.Column="0" Grid.Row="1" FontSize="20" Margin="20"/>
